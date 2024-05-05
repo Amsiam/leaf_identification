@@ -4,6 +4,11 @@ Open tarminal and type
 ```
 git clone https://github.com/Amsiam/leaf_identification.git
 ```
+or download from 
+```
+https://github.com/Amsiam/leaf_identification.git
+```
+
 then 
 ```
 cd leaf_identification
