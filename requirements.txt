@@ -33,7 +33,7 @@ idna==3.7
 imageio==2.34.1
 jsonschema==4.22.0
 jsonschema-specifications==2023.12.1
-keras==2.14.0
+keras==2.15.0
 lazy_loader==0.4
 libclang==18.1.1
 llvmlite==0.42.0
@@ -78,10 +78,10 @@ scipy==1.13.0
 six==1.16.0
 sqlparse==0.5.0
 sympy==1.12
-tensorboard==2.14.0
+tensorboard==2.15.2
 tensorboard-data-server==0.7.2
-tensorflow==2.14.1
-tensorflow-estimator==2.14.0
+tensorflow==2.15.0
+tensorflow-estimator==2.15.0
 tensorflow-io-gcs-filesystem==0.37.0
 termcolor==2.4.0
 tifffile==2024.4.24
