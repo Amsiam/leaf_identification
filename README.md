@@ -1,4 +1,4 @@
-# Leaf Disease Detection Using ML
+# Leaf Disease Detection Using ML Frontend
 
 Open tarminal and type 
 ```
