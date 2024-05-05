@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome to Our Thesis</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f0f0f0;
+        }
+        #container {
+            text-align: center;
+        }
+        form {
+            margin-bottom: 20px;
+        }
+        input[type="file"] {
+            margin-right: 10px;
+        }
+        button {
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+        #imageContainer {
+            margin-top: 20px;
+        }
+        img {
+            max-width: 300px;
+            max-height: 300px;
+            width: auto;
+            height: auto;
+        }
+        figcaption {
+            margin-top: 10px;
+            color: #555;
+        }
+    </style>
+</head>
+<body>
+    <div id="container">
+        <h1>Welcome </h1>
+        <p>Thesis Title: <span id="projectName">Identifying leaf and detechting leaf disease using CNN</span></p>
+        
+        <form action="" method="post" enctype="multipart/form-data">
+            {% csrf_token %}
+            <input type="file" name="image" id="imageInput" accept="image/*">
+            <button type="submit">Submit</button>
+        </form>
+
+        {% if results %}
+
+        <h1>Detected Result: </h1>
+
+        <ul style="list-style-type:none">
+            {% for result in results %}
+            {% if result.1 > 0.01 %}
+                <li style="background:green; padding:5px 10px;color:white;margin-bottom:2px;">{{result.0}}({{result.1|floatformat:2}}%)</li>
+            {% endif %}
+            {% endfor %}
+        </ul>
+
+        {% endif %}
+
+    </div>
+
+</body>
+</html>
